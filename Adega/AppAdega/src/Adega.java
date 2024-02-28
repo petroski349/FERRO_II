@@ -83,7 +83,7 @@ public class Adega {
         int cont = 0;
         for(int i=0,j;i<20;i++){
             for(j=0;j<10;j++){
-                if(posicaoValida(i,j))
+                if(!posicaoValida(i,j))
                     cont++;
             }
         }
@@ -94,7 +94,7 @@ public class Adega {
         double soma=0;
         for(int i=0,j;i<20;i++){
             for(j=0;j<10;j++){
-                if(posicaoValida(i,j))
+                if(!posicaoValida(i,j))
                     soma += vinhos[i][j].getValor();
             }
         }
@@ -106,8 +106,8 @@ public class Adega {
         maisAnt.setDtprod(LocalDate.of(2030,2,22));
         for(int i=0,j;i<20;i++){
             for(j=0;j<10;j++){
-                if(posicaoValida(i,j))
-                    if(vinhos[i][j].getDtprod().compareTo(maisAnt.getDtprod())>0)
+                if(!posicaoValida(i,j))
+                    if(vinhos[i][j].getDtprod().compareTo(maisAnt.getDtprod())<0)
                         maisAnt = vinhos[i][j];
             }
         }
