@@ -24,7 +24,8 @@ public class Vinho {
         this(tipo,marca,volume,LocalDate.now(),0);
     }
 
-    public String getTipo() {
+
+    public java.lang.String getTipo() {
         return tipo;
     }
 
